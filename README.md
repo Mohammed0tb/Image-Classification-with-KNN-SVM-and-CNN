@@ -1,26 +1,29 @@
 # Image Classification Project
 
-- **Purpose:**  
-  Image classification using three approaches:
-  - **KNN:** Optimal K via k-fold cross-validation.
-  - **SVM:** PCA-based dimensionality reduction and linear SVM.
-  - **CNN:** End-to-end convolutional neural network.
+This project demonstrates how to classify images using three different approaches:
 
-- **Dataset:**  
-  Images organized by class stored in Google Drive (update `data_path` in the code accordingly).
+- **Data Loading & Preprocessing:**
+  - Loads images from a specified source on Google Drive.
+  - Resizes, normalizes, and balances the dataset by sampling a fixed number of images per class.
 
-- **Dependencies:**  
-  - numpy  
-  - tensorflow  
-  - scikit-learn  
-  - matplotlib  
-  - seaborn
+- **Modeling Approaches:**
+  - **K-Nearest Neighbors (KNN):**  
+    Uses k-fold cross-validation to determine the optimal number of neighbors and evaluates classification performance.
+  - **Support Vector Machine (SVM) with PCA:**  
+    Applies Principal Component Analysis for dimensionality reduction before training a linear SVM, and evaluates the model with accuracy, precision, and recall.
+  - **Convolutional Neural Network (CNN):**  
+    Implements an end-to-end CNN to classify images, providing an alternative deep learning approach.
 
-- **Usage:**  
-  1. Upload the code to Google Colab.
-  2. Mount Google Drive and update the dataset path.
-  3. Run the notebook cells sequentially.
+- **Evaluation & Visualization:**
+  - Generates confusion matrices and classification reports for each model.
+  - Compares model performances using bar plots to visualize accuracy, precision, and recall.
 
-- **Results:**  
-  - Model evaluations include accuracy, confusion matrices, precision, and recall.
-  - A bar plot compares the performance of KNN, SVM, and CNN models.
+- **Dataset Source:**  
+  The project uses an image dataset organized by class.  
+  **Source Data:** [Link to Dataset]([https://your-dataset-link.com](https://www.kaggle.com/datasets/sachinkumar413/covid-pneumonia-normal-chest-xray-images?select=PNEUMONIA))
+
+## Usage
+
+1. Open the notebook in Google Colab.
+2. Mount your Google Drive and update the `data_path` variable to point to your dataset.
+3. Run the notebook cells sequentially to load data, train models, evaluate performance, and visualize results.
